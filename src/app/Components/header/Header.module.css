@@ -1,0 +1,506 @@
+.mainHeader {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: transparent;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    padding: 10px 0px;
+
+
+}
+
+.logo h1 {
+    color: black;
+}
+
+/* .mainHeader .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+} */
+
+.headerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.MenuIcon {
+    display: none;
+    cursor: pointer;
+    padding-right: 10px;
+    font-size: 20px;
+}
+
+.navMenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    position: relative;
+}
+
+.navMenu li {
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+
+}
+
+.navMenu li a {
+    text-decoration: none;
+    position: relative;
+    color: #515050;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+.navMenu li a i {
+    margin: 0;
+    padding: 0;
+}
+
+.navMenu>li>a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    width: 0;
+    height: 3px;
+    background-color: #0D6EFD;
+    transition: width 0.3s ease-in-out;
+    transform: translateX(-50%);
+    border-radius: 100px;
+}
+
+.searchBar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 250px;
+    border-radius: 25px;
+    overflow: hidden;
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+}
+
+.searchBarProfile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.searchInput {
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background: transparent;
+    color: #333;
+}
+
+.searchBar i {
+    position: absolute;
+    right: 10px;
+    color: #555;
+    cursor: pointer;
+}
+
+.subemenus a::after {
+    height: 0;
+
+}
+
+.navMenu li:hover a::after {
+    width: 100%;
+}
+
+.navMenu li.active a {
+    font-weight: bold;
+}
+
+.navMenu li.active a::after {
+    width: 100%;
+}
+
+.hasSubmenu {
+    position: relative;
+}
+
+.hasSubmenu .submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 0;
+    min-width: 250px;
+    border-radius: 5px;
+    z-index: 1000;
+    display: none;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+
+}
+
+.hasSubmenu .submenu li:hover {
+    background-color: rgba(0, 0, 0, 0.164);
+}
+
+.hasSubmenu:hover .submenu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+.hasSubmenu .submenuIcon {
+    transition: transform 0.3s ease-in-out;
+    font-size: 15px;
+}
+
+.hasSubmenu .submenuIcon {
+    transform: rotate(-90deg);
+}
+
+.hasSubmenu .submenu li {
+    padding: 12px 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.194);
+
+}
+
+.hasSubmenu .submenu li:last-child {
+    border-bottom: none;
+}
+
+.hasSubmenu .submenu li a {
+    color: #333;
+    font-weight: normal;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+.hasSubmenu:not(:hover) .submenu {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.hasNestedSubmenu {
+    position: relative;
+}
+
+.nestedSubmenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100.5%;
+    background: white;
+    padding: 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 250px;
+    border-top: 5px solid #0D6EFD;
+    border-radius: 3px;
+
+}
+
+.nestedSubmenu li {
+    list-style: none;
+    cursor: pointer;
+}
+
+.hasNestedSubmenu:hover .nestedSubmenu {
+    display: block;
+}
+
+.hasNestedSubmenu .submenuIcon {
+    float: right !important;
+    transform: rotate(0deg);
+    transition: all 0.3s ease;
+    padding: 7px;
+    color: #515050;
+    font-size: 12px;
+}
+
+.hasNestedSubmenu:hover .submenuIcon {
+    transform: rotate(-90deg) !important;
+}
+
+@media (max-width: 900px) {
+    .navMenu {
+        flex-direction: column;
+    }
+
+    .hasSubmenu .submenu {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        box-shadow: none;
+        display: none;
+    }
+
+    .hasSubmenu:hover .submenu {
+        display: block;
+    }
+}
+
+.hasSubmenu .submenu li a::after {
+    display: none;
+}
+
+
+.profile {
+    position: relative;
+    cursor: pointer;
+}
+
+.profileEdit {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.311);
+}
+
+.profileEditImage {
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+}
+
+.profileEdit img {
+    border-radius: 100px;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.profileEdit h3 {
+    font-size: 17px;
+    margin: 0;
+}
+
+.profileEdit p {
+    font-size: 13px;
+    margin: 0;
+}
+
+.profileDropdown {
+    position: absolute;
+    top: 125%;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    width: 230px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.profileDropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding: 20px 0px;
+}
+
+.profileDropdown li {
+    padding: 7px;
+    transition: all 0.3s ease;
+}
+
+.profileDropdown li:hover {
+    background-color: rgba(0, 0, 0, 0.158);
+}
+
+.profileDropdown li:last-child {
+    border-bottom: none;
+}
+
+.profileDropdown li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.profileDropdown li i {
+    color: #3f3f3f;
+    padding-right: 10px;
+    color: #6F42C1;
+}
+
+/* mobile menu section start */
+/* .mobileMain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    z-index: 9999;
+    background: linear-gradient(115deg, #ff3a2c 0%, #fba860 100%);
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.2);
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-in-out;
+}
+
+.menuIcon {
+    cursor: pointer;
+}
+
+.mobileMain.open {
+    transform: translateX(0);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.mobileMainHead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+    padding-right: 20px;
+}
+
+.mobileMenuItem {
+    margin-top: 50px;
+}
+
+.mobileMenuItem ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobileMenuItem li {
+    cursor: pointer;
+    padding: 12px 16px;
+    padding-left: 30px;
+    font-size: 14px;
+    position: relative;
+    display: block;
+    transition: background 0.3s, color 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba(0, 0, 0, 0.758);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+
+}
+
+.mobileMain ul li .menuItemWrapper {
+    color: rgba(0, 0, 0, 0.758);
+    font-weight: bold;
+    letter-spacing: 1px;
+
+
+
+}
+
+.mobileMenuItem li:hover {
+    background: rgba(52, 51, 51, 0.146);
+
+}
+
+.MobileMenuIcons {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.MobileMenuIcon {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(1, 1, 1, 0.212);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    color: rgb(168, 167, 167);
+}
+
+.submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out, visibility 0s 0.5s;
+    padding: 0;
+    margin-top: 5px;
+    width: 100%;
+    visibility: hidden;
+    background-color: rgba(255, 255, 255, 0.667);
+}
+
+.submenu.open {
+    max-height: 250px;
+    visibility: visible;
+    transition: max-height 0.5s ease-in-out, padding 0.3s ease-in-out, visibility 0s 0s;
+}
+
+.submenu li {
+    margin: 0;
+    padding: 12px 20px;
+    padding-left: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #1b1a1a;
+    background: transparent;
+    transition: background 0.3s, color 0.3s;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.279);
+    text-transform: capitalize;
+    transition: all 0.3s ease;
+}
+
+.submenu li i {
+    padding-right: 5px;
+}
+
+.submenu li:hover {
+    background-color: #0D6EFD;
+    color: white;
+    padding-left: 50px;
+}
+
+.submenu li:last-child {
+    border-bottom: none;
+}
+
+
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+.menuItemWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.fa-angle-down {
+    transition: transform 0.3s ease;
+    margin-left: auto;
+} */
+
+/* mobile menu section end */

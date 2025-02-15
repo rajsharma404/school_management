@@ -1,0 +1,117 @@
+.loginMain {
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://img.freepik.com/free-photo/city-committed-education-collage-concept_23-2150062204.jpg?uid=R156497285&ga=GA1.1.1921166926.1684059532&semt=ais_hybrid");
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginMainOverlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.74);
+}
+
+.loginMainForm {
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    width: 350px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.registerMainForm {
+    width: 400px;
+}
+
+.loginMainForm h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+}
+
+.inputGroup {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.inputGroup input {
+    width: 100%;
+    padding: 12px 40px 12px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+.inputGroup .icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+}
+
+.loginActions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.loginActions a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.loginButton {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #007bff;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.loginButton:hover {
+    background: #0056b3;
+    background-color: orangered;
+}
+
+.registerRedirect {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.registerRedirect a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+@media(max-width:426px) {
+    .registerMainForm {
+        margin-top: 50px;
+    }
+}
+
+
+.timer span {
+    color: green;
+    font-size: 20px;
+
+}

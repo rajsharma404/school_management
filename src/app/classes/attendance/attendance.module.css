@@ -1,0 +1,186 @@
+.attendanceMain {
+    background-color: #f9f9f9;
+    padding: 50px 0px;
+    background-color: #EAE3F6;
+}
+
+.attendance {
+    background-color: white;
+    padding: 50px;
+    padding-top: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.attendance h1 {
+    text-align: center;
+    color: #333;
+    padding-bottom: 40px;
+}
+
+.attendance .controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.searchContainer {
+    display: flex;
+    align-items: center;
+}
+
+.searchBar {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    background-color: #EAE3F6;
+    outline: none;
+    border-radius: 2px 0px 0px 3px;
+}
+
+.searchButton {
+    padding: 11px 15px;
+    background-color: #6F42C1;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 0px 3px 3px 0px;
+}
+
+.searchButton:hover {
+    background-color: #6e42c1e4;
+}
+
+.addButton {
+    padding: 10px 20px;
+    background-color: #6F42C1;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.addButton:hover {
+    background-color: #6e42c1c5;
+}
+
+.table-container {
+    margin-top: 30px;
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+.table th,
+.table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.table th {
+    background-color: #f2f2f2;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.paginationBtn {
+    display: flex;
+    gap: 10px;
+}
+
+.paginationButton {
+    padding: 5px 20px;
+    background-color: #6F42C1;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.paginationButton:hover {
+    background-color: #6e42c1d7;
+}
+
+.paginationButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 4px;
+    width: 400px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.input-field {
+    margin-bottom: 15px;
+    outline: none;
+}
+
+.input-field label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-field input,
+.input-field select,
+.input-field textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+.input-field textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+@media (max-width: 768px) {
+    .table {
+        font-size: 14px;
+    }
+}

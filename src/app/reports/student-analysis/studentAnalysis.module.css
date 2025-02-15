@@ -1,0 +1,127 @@
+.studentAnalysisMains {
+    font-family: 'Arial', sans-serif;
+    padding-bottom: 80px;
+}
+
+.studentAnalysisMain {
+    margin-top: 50px;
+}
+
+.studentAnalysisMain h1 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 15px;
+}
+
+.introText {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.card {
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+.cardHeader {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.1rem;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    color: #6F42C1;
+}
+
+.cardBody {
+    padding: 25px;
+    color: #555;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.table th,
+.table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #007bff;
+}
+
+.table td {
+    font-size: 1rem;
+    color: #555;
+}
+
+.table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.cardBody input {
+    background-color: #EAE3F6;
+    border: none;
+    outline: none;
+    padding: 13px 16px;
+    border-radius: 3px 0px 0px 3px;
+}
+
+.cardBody button {
+    background-color: #6F42C1;
+    color: white;
+    border: none;
+    padding: 13px 16px;
+    border-radius: 0px 3px 3px 0px;
+}
+
+.prevNextBtn {
+    display: flex;
+    gap: 10px;
+}
+
+.prevNextBtn button {
+    padding: 5px 16px;
+    cursor: pointer;
+    background-color: #6F42C1;
+    color: white;
+    border: none;
+    border-radius: 3px;
+}
+
+.prevNextBtn button:disabled {
+    cursor: not-allowed;
+    background-color: #ccc;
+}
+
+@media (max-width: 767px) {
+    .studentAnalysisMain h1 {
+        font-size: 1.5rem;
+    }
+
+    .cardHeader {
+        font-size: 1rem;
+    }
+
+    .cardBody {
+        padding: 15px;
+    }
+
+    .table th,
+    .table td {
+        font-size: 0.9rem;
+    }
+}

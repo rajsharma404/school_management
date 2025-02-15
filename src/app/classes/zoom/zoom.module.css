@@ -1,0 +1,40 @@
+.zoomMain {
+    text-align: center;
+    padding: 2rem;
+}
+
+.zoomHeader {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+}
+
+.zoomContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.zoomButton {
+    background-color: #007bff;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.zoomButton:hover {
+    background-color: #0056b3;
+}
+
+@media (min-width: 768px) {
+    .zoomContainer {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}

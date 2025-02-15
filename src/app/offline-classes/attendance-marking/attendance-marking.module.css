@@ -1,0 +1,98 @@
+.attendanceMarkingMains {
+    background-color: #f8f9fa;
+    padding-bottom: 80px;
+}
+
+.attendanceMarkingMain {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.attendanceMarkingMains h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.searchTerm {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.searchTerm input {
+    background-color: #EAE3F6;
+    padding: 13px 16px;
+    width: 250px;
+    border: none;
+    outline: none;
+    border-radius: 3px 0px 0px 3px;
+}
+
+.searchTerm button {
+    border-radius: 0px 3px 3px 0px !important;
+}
+
+.attendanceMarkingMains .table {
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.attendanceMarkingMains .table th {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+}
+
+.attendanceMarkingMains .table td {
+    text-align: center;
+}
+
+
+.attendanceMarkingMains .d-flex {
+    margin-top: 10px;
+}
+
+.attendanceMarkingMains .d-flex span {
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+}
+
+.modal-content {
+    border-radius: 10px;
+}
+
+.modal-title {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.modal-body select {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+.PaginationBtn {
+    display: flex;
+    gap: 10px;
+}
+
+.attendanceMarkingMain button {
+    padding: 5px 16px;
+    cursor: pointer;
+    background-color: #6F42C1;
+    color: white;
+    border: none;
+    border-radius: 3px;
+}
+
+
+.PaginationBtn button:disabled {
+    cursor: not-allowed;
+    background-color: #ccc;
+}

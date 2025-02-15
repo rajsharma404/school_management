@@ -1,0 +1,443 @@
+/* news latter section start */
+.newsLatterMain {
+    background-color: #17A2B8;
+    padding: 100px 0px;
+    background-color: #EAE3F6;
+}
+
+.newsLatter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.newsLatterPhone {
+    width: 50%;
+    background-color: white;
+    padding: 35px;
+    color: black;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.newsLatterPhone i {
+    font-size: 80px;
+    color: #6F42C1;
+}
+
+.newsLatterPhoneImage {
+    position: absolute;
+    top: -40%;
+    left: -17%;
+}
+
+.newsLatterPhoneImage img {
+    width: 100% !important;
+    height: 200px !important;
+    height: auto;
+}
+
+.newsLatterOr {
+    /* background-color: #17A2B8; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 0px -15px;
+    z-index: 4;
+    border-radius: 5px;
+    background-color: #6F42C1;
+
+
+
+}
+
+.newsLatter .or {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    width: 60px;
+    height: 60px;
+    color: orangered;
+    color: white;
+}
+
+.newsLatterEmail {
+    background-color: white;
+    width: 50%;
+    padding: 35px 40px;
+    color: black;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px;
+}
+
+.newsLatterEmailImage {
+    position: absolute;
+    top: -33%;
+    right: -20%;
+}
+
+.newsLatterEmailImage img {
+    width: 100% !important;
+    height: auto;
+}
+
+.newsLatterPhone p {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.newsLatterPhone a {
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.newsLatterOr {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.newsLatterEmail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.newsLatterEmailField p {
+    padding: 0;
+    text-align: start;
+    margin: 0;
+    color: black;
+    letter-spacing: 0px;
+    font-family: sans-serif;
+}
+
+.emailInput {
+    padding: 18px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    width: 350px;
+    background-color: #EAE3F6;
+    outline: none;
+    border: none;
+    color: black;
+    margin: 5px 0px;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.emailInput::placeholder {
+    color: black;
+}
+
+.emailButton {
+    background-color: #6F42C1;
+    border: none;
+    padding: 21px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px 5px 5px 0px;
+    transition: all 0.3s ease;
+}
+
+.emailButton:hover {
+    background-color: #0D6EFD;
+    cursor: pointer;
+}
+
+.emailIcon {
+    color: white;
+    font-size: 18px;
+}
+
+/* news latter section end */
+
+
+/* get in touch section start */
+.getInTouchMains {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    background-image: url("https://img.freepik.com/free-photo/businesswoman-taking-notes-clipboard-sitting-desk-corporate-office-while-taking_482257-4201.jpg?uid=R156497285&ga=GA1.1.1921166926.1684059532");
+    background-size: contain;
+    background-position: -120px center;
+    display: flex;
+    align-items: center;
+}
+
+.getInTouchMain {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+}
+
+.getInTouchMains .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.4) 40%, #161616 80%);
+
+}
+
+.getInTouchMains .getInTouchForm {
+    position: relative;
+    background: rgba(255, 255, 255, 0.989);
+    padding: 30px;
+    border-radius: 8px;
+    width: 50%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.002);
+
+}
+
+.getInTouchMains .getInTouchForm h2 {
+    margin-bottom: 20px;
+    color: white;
+    text-align: start;
+    font-weight: bold;
+}
+
+.getInTouchMains .row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.getInTouchMains .inputGroup {
+    position: relative;
+    width: 100%;
+}
+
+.getInTouchMains .inputGroup input {
+    width: 100%;
+    padding: 10px;
+    padding-right: 40px;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.258);
+    color: white;
+}
+
+.inputGroupTextarea textarea {
+    background-color: rgba(255, 255, 255, 0.258);
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+
+.inputGroupTextarea textarea::placeholder {
+    color: white;
+}
+
+.getInTouchMains .inputGroup input::placeholder {
+    color: white;
+}
+
+.getInTouchMains .icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 18px;
+}
+
+@media (max-width: 500px) {
+    .getInTouchMains .row {
+        flex-direction: column;
+    }
+}
+
+.submitBtn {
+    margin-top: 20px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 10px 20px rgba(241, 2, 2, 0.2);
+    padding-block: 0.5rem;
+    padding-inline: 1.25rem;
+    background-color: #6F42C1;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffff;
+    gap: 10px;
+    font-weight: bold;
+    outline: none;
+    overflow: hidden;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 15px 100px;
+    transition: all 0.3s ease;
+    border: none;
+    letter-spacing: 0.5px;
+
+}
+
+.submitBtn .icon {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease;
+}
+
+.submitBtn:hover {
+    transform: scale(1.05);
+    border-color: #fff9;
+}
+
+.submitBtn:hover .icon {
+    transform: translate(4px);
+}
+
+.submitBtn:hover::before {
+    animation: shine 1.5s ease-out infinite;
+}
+
+.submitBtn::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(120deg,
+            rgba(255, 255, 255, 0) 30%,
+            rgba(255, 255, 255, 0.8),
+            rgba(255, 255, 255, 0) 70%);
+    top: 0;
+    left: -100px;
+    opacity: 0.6;
+}
+
+@keyframes shine {
+    0% {
+        left: -100px;
+    }
+
+    60% {
+        left: 100%;
+    }
+
+    to {
+        left: 100%;
+    }
+}
+
+.submitBtn:hover {
+    background-color: blue;
+    border: none;
+}
+
+/* get in touch section end */
+
+
+
+/* medeia query for responsive */
+
+@media(max-width:769px) {
+    .getInTouchMains {
+        background-size: cover;
+    }
+
+    .getInTouchForm {
+        width: 100% !important;
+        margin-top: -50px;
+
+    }
+
+    .newsLatter {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .newsLatterPhone {
+        width: 100%;
+    }
+
+    .newsLatterEmail {
+        width: 100%;
+    }
+
+    .newsLatterPhoneImage {
+        left: -6%;
+    }
+
+    .newsLatterEmailImage {
+        right: -11%;
+    }
+
+    .newsLatterOr {
+        margin: -15px 0px;
+    }
+
+
+}
+
+@media(max-width:426px) {
+    .getInTouchMains {
+        height: 115vh;
+    }
+
+    .getInTouchForm {
+        padding: 0 !important;
+        margin-top: -45px;
+    }
+
+    .getInTouchMains .row {
+        margin-bottom: 17px;
+    }
+
+    .newsLatterEmail {
+        padding: 23px;
+    }
+
+    .newsLatterPhoneImage {
+        display: none;
+    }
+
+    .newsLatterEmailImage {
+        display: none;
+    }
+
+
+
+
+}
+
+@media(max-width:376px) {
+    .newsLatterEmail {
+        padding: 20px;
+    }
+
+    .emailInput {
+        width: 250px;
+    }
+}
+
+@media(max-width:321px) {
+    .newsLatterEmail {
+        padding: 10px;
+    }
+
+    .emailInput {
+        width: 220px;
+    }
+}
