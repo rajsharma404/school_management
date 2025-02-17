@@ -1,0 +1,151 @@
+.HeroSectionMain {
+    width: 100%;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 520px;
+}
+
+.slideOverlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.527);
+}
+
+.slideOverlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right,
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.4));
+}
+
+
+.HeroSectionContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    width: 80%;
+}
+
+.HeroSectionContent h1 {
+    font-size: 50px;
+    font-family: emoji;
+}
+
+.HeroSectionContent p {
+    font-size: 20px;
+}
+
+.slide img {
+    width: 100%;
+    height: 100;
+    object-fit: contain;
+
+}
+
+.prevBtn,
+.nextBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.prevBtn {
+    left: 10px;
+}
+
+.nextBtn {
+    right: 10px;
+}
+
+.prevBtn:hover,
+.nextBtn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+.getStarted {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+
+}
+
+.getStarted button {
+    background-color: #007bff;
+    padding: 12px 40px;
+    border: none;
+    color: white;
+    transition: all 0.3s ease;
+    border-radius: 3px;
+}
+
+.getStarted button:hover {
+    background-color: red;
+
+}
+
+.getStartedWatch {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #05050597;
+    border-radius: 100px;
+    transition: all 0.3s ease;
+    animation: autoHover 1.5s ease-in-out infinite;
+    cursor: pointer;
+}
+
+/* Inner Icon */
+.getStartedWatchIcon {
+    background-color: #066AC9;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 13px;
+    border-radius: 100px;
+}
+
+/* Automatic Hover Animation */
+@keyframes autoHover {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.3);
+    }
+}

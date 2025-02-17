@@ -7,15 +7,17 @@ import heroImage from "../../public/assests/homeImage.png"
 import heroStar from "../../public/assests/heroStar.png"
 import { AiFillSafetyCertificate } from "react-icons/ai";
 import PopularCourses from './Components/mostpopularCourse/PopularCourses'
-import Testimonial from './Components/testimonial/Testimonial'
+// import Testimonial from './Components/testimonial/Testimonial'
 import { Typewriter } from "react-simple-typewriter";
 import NewsLatter from './Components/newsLatter/NewsLatter'
 import GetInTouch from './Components/newsLatter/GetInTouch'
 import MembershipCourses from './Components/membership/MembershipCourse'
+import HeroSection from './Components/herosection/HeroSection'
 const page = () => {
   return (
     <div className={style.Pages}>
       {/* Hero Section */}
+      <HeroSection />
       <div className="container">
         <section className={style.hero}>
           <div className={style.heroContent}>
@@ -30,7 +32,6 @@ const page = () => {
                 deleteSpeed={50}
                 delaySpeed={1000}
               />
-              {/* Limitless learning at your <span>fingertips</span> */}
             </h1>
             <p>Online learning and teaching marketplace with 5K+ courses & 10M students. Taught by experts to help you acquire new skills.</p>
             <div className={style.certificateAll}>
@@ -170,10 +171,10 @@ const page = () => {
         </div>
 
       </div>
-      <div className={`${style.Testimonial} mt-5`}>
+      {/* <div className={`${style.Testimonial} mt-5`}>
   
         <Testimonial />
-      </div>
+      </div> */}
       <MembershipCourses />
       <div className={`${style.NewsLatter}`}>
         <GetInTouch />

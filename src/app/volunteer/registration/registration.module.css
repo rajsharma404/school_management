@@ -53,7 +53,7 @@
 .submitBtn {
     width: 100%;
     padding: 12px;
-    background-color: #5cb85c;
+    background-color: #0D6EFD;
     color: white;
     border: none;
     border-radius: 5px;
@@ -62,7 +62,7 @@
 }
 
 .submitBtn:hover {
-    background-color: #4cae4c;
+    background-color: #0c5dd6;
 }
 
 @media (max-width: 768px) {

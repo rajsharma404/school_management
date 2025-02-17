@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import style from "./Header.module.css";
+import { IoCartOutline } from "react-icons/io5";
 
 const Header = () => {
     const router = useRouter();
@@ -52,7 +53,7 @@ const Header = () => {
                             <li className={`${style.hasSubmenu} ${openSubmenu === 2 ? style.open : ""} ${pathname.includes("/classes") ? "active" : ""}`}
                                 onMouseEnter={() => handleMouseEnter(2)}
                                 onMouseLeave={handleMouseLeave}>
-                                <Link href="#">Classes </Link><i className={`${style.submenuIcon} fa-solid fa-angle-left`}></i>
+                                <Link href="#">Classes <i className={`${style.submenuIcon} fa-solid fa-angle-left`}></i></Link>
                                 <ul className={style.submenu}>
                                     <li className={`${style.hasNestedSubmenu} ${openSubmenu === 3 ? style.open : ""}`}
                                         onMouseEnter={() => setOpenSubmenu(3)}
@@ -109,15 +110,15 @@ const Header = () => {
                                     <li className={`${style.hasNestedSubmenu} ${openSubmenu === 3 ? style.open : ""}`}
                                         onMouseEnter={() => setOpenSubmenu(3)}
                                         onMouseLeave={() => setOpenSubmenu(2)}>
-                                        <Link href="/recurring-donation/monthly">One to one session <i className={`${style.submenuIcon} fa-solid fa-angle-left`}></i></Link>
+                                        <Link href="#">One to one session <i className={`${style.submenuIcon} fa-solid fa-angle-left`}></i></Link>
                                         <ul className={style.nestedSubmenu}>
-                                            <li><Link href="/live-class/recorded">Calender plannig</Link></li>
+                                            <li><Link href="#">Calender plannig</Link></li>
                                         </ul>
                                     </li>
                                     <li className={`${style.hasNestedSubmenu} ${openSubmenu === 3 ? style.open : ""}`}
                                         onMouseEnter={() => setOpenSubmenu(3)}
                                         onMouseLeave={() => setOpenSubmenu(2)}>
-                                        <Link href="/membership">Membership <i className={`${style.submenuIcon} fa-solid fa-angle-left`}></i></Link>
+                                        <Link href="#">Membership <i className={`${style.submenuIcon} fa-solid fa-angle-left`}></i></Link>
                                         <ul className={style.nestedSubmenu}>
                                             <li onClick={() => router.push("/membership/levels")}>
                                                 Name of levels/membership
@@ -186,9 +187,13 @@ const Header = () => {
                             <li className={pathname === "/contact" ? "active" : ""}>
                                 <Link href="/contact">Contact</Link>
                             </li>
+                            <li className={pathname === "#" ? "active" : ""}>
+                                <Link href="#">Login</Link>
+                            </li>
+                            <li><IoCartOutline className={style.addToCart} /></li>
                         </ul>
 
-                        <div className={style.searchBarProfile}>
+                        {/* <div className={style.searchBarProfile}>
                             <div className={style.searchBar}>
                                 <input type="text" placeholder="Search..." className={style.searchInput} />
                                 <i className="fa-solid fa-search"></i>
@@ -231,7 +236,7 @@ const Header = () => {
                                     </div>
                                 )}
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 <div className={style.MenuIcon} onClick={() => setIsMobileMenuOpen(true)}>

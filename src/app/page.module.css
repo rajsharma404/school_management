@@ -17,6 +17,7 @@
 .heroContent {
   width: 50%;
   animation: slideIn 1s ease-out;
+  
 }
 
 .heroContentImg {
@@ -91,6 +92,7 @@
 
 }
 
+/* 
 .getStartedWatch {
   width: 60px;
   height: 60px;
@@ -118,6 +120,45 @@
   color: white;
   font-size: 13px;
   border-radius: 100px;
+} */
+
+.getStartedWatch {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #9BC3E9;
+  border-radius: 100px;
+  transition: all 0.3s ease;
+  animation: autoHover 1.5s ease-in-out infinite;
+  cursor: pointer;
+}
+
+/* Inner Icon */
+.getStartedWatchIcon {
+  background-color: #066AC9;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 13px;
+  border-radius: 100px;
+}
+
+/* Automatic Hover Animation */
+@keyframes autoHover {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.3);
+  }
 }
 
 .heroImageBackground {
@@ -401,7 +442,7 @@
 .instructorBtn {
   width: 50%;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .instructorBtn button {
