@@ -65,7 +65,7 @@ const HeroSection = () => {
 
                     </div>
                     <div className={style.HeroSectionContent}>
-                        <h1>Immerse yourself in an Online Retreat</h1>
+                        <h1>Immerse yourself in an Online LMS</h1>
                         <p>Meet our exceptional Quest Coaches and learn from their wealth of experience to enhance your wellbeing and embody living.</p>
 
                     </div>
