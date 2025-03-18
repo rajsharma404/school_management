@@ -2,8 +2,8 @@ import { NextResponse } from "next/server";
 
 const protectedRoutes = {
     student: ["/student"],  // 👈 Students can access only this
-    teacher: ["/teacher"],  // 👈 Teachers can access these
-    admin: ["/dashboard"],  // 👈 Admin can access everything
+    teacher: ["/teacher"], // 👈 Teachers can access these
+    admin: ["/dashboard"], // 👈 Admin can access everything
 };
 
 async function verifyJWT(token, secret) {
@@ -35,30 +35,8 @@ async function verifyJWT(token, secret) {
 }
 
 export async function middleware(req) {
-    const { method, nextUrl } = req;
+    console.log("🔍 Middleware running on:", req.nextUrl.pathname);
 
-    // 🔹 Handle CORS for API routes
-    if (nextUrl.pathname.startsWith('/api/')) {
-        if (method === 'OPTIONS') {
-            return new Response(null, {
-                status: 204,
-                headers: {
-                    'Access-Control-Allow-Origin': '*',
-                    'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
-                    'Access-Control-Allow-Headers': 'Content-Type, Authorization',
-                },
-            });
-        }
-
-        const res = NextResponse.next();
-        res.headers.set('Access-Control-Allow-Origin', '*');
-        res.headers.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-        res.headers.set('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-
-        return res;
-    }
-
-    // 🔹 Authentication Logic
     const tokenCookie = req.cookies.get("token");
     const token = tokenCookie ? tokenCookie.value : null;
 
@@ -79,9 +57,10 @@ export async function middleware(req) {
     const userRole = decoded.role;
     const allowedRoutes = protectedRoutes[userRole] || [];
 
+    // 🚀 **Restrict unauthorized access**
     if (!allowedRoutes.some(route => req.nextUrl.pathname.startsWith(route))) {
         console.log(`❌ Unauthorized access: ${userRole} cannot access ${req.nextUrl.pathname}`);
-        return NextResponse.redirect(new URL("/login", req.url));
+        return NextResponse.redirect(new URL("/login", req.url));  // Redirect unauthorized users
     }
 
     return NextResponse.next();
@@ -89,5 +68,5 @@ export async function middleware(req) {
 
 // ✅ Middleware applies to all protected subpaths
 export const config = {
-    matcher: ["/dashboard/:path*", "/teacher/:path*", "/student/:path*", '/api/:path*'],
+    matcher: ["/dashboard/:path*", "/teacher/:path*", "/student/:path*"],
 };
