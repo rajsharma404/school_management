@@ -15,13 +15,13 @@ const StudentPerformance = () => {
         const fetchStudents = async () => {
             try {
                 // Fetch student data
-                const studentResponse = await fetch("http://localhost:3000/api");
+                const studentResponse = await fetch("https://school-management-6gh3.vercel.app/api");
                 if (!studentResponse.ok) throw new Error("Failed to fetch students");
                 const studentData = await studentResponse.json();
                 const studentsArray = Array.isArray(studentData.result) ? studentData.result : [];
 
                 // Fetch attendance data
-                const attendanceResponse = await fetch("http://localhost:3000/api/attendance_marking");
+                const attendanceResponse = await fetch("https://school-management-6gh3.vercel.app/api/attendance_marking");
                 if (!attendanceResponse.ok) throw new Error("Failed to fetch attendance");
                 const attendanceData = await attendanceResponse.json();
                 const attendanceArray = Array.isArray(attendanceData.result) ? attendanceData.result : [];
