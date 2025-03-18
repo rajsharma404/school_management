@@ -1,64 +1,85 @@
 .loginMain {
-    width: 100%;
-    height: 100vh;
-    background-image: url("https://img.freepik.com/free-photo/city-committed-education-collage-concept_23-2150062204.jpg?uid=R156497285&ga=GA1.1.1921166926.1684059532&semt=ais_hybrid");
-    background-size: cover;
-    background-position: center bottom;
-    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    position: relative;
 }
 
 .loginMainOverlay {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.74);
+    background: rgba(0, 0, 0, 0.3);
 }
 
 .loginMainForm {
     position: relative;
-    z-index: 1;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 30px;
+    background: white;
+    padding: 40px;
     border-radius: 10px;
-    width: 350px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 400px;
     text-align: center;
 }
 
-.registerMainForm {
-    width: 400px;
+.loginMainForm h2 {
+    font-size: 20px;
 }
 
-.loginMainForm h2 {
-    margin-bottom: 20px;
+.loginTitle {
+    margin-bottom: 30px;
     font-size: 24px;
-    color: #333;
     font-weight: bold;
+    color: #333;
 }
 
 .inputGroup {
     position: relative;
-    margin-bottom: 15px;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
 }
 
-.inputGroup input {
+.otpSection input {
     width: 100%;
-    padding: 12px 40px 12px 10px;
+    padding: 10px 12px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
     outline: none;
+    font-size: 16px;
+    border-radius: 0px 3px 3px 0px;
+    margin: 10px 0px;
 }
 
-.inputGroup .icon {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #666;
+.inputGroup input,
+.inputGroup select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 16px;
+    border-radius: 0px 3px 3px 0px
+}
+
+.inputGroup select {
+    padding-left: 10px;
+    appearance: none;
+    background: white;
+    cursor: pointer;
+}
+
+.iconLogo {
+
+    background-color: #EAE3F6;
+    padding: 11px 13px;
+    border-radius: 3px 0px 0px 3px;
+}
+
+.icon {
+
+    color: #6F42C1;
+
 }
 
 .loginActions {
@@ -66,52 +87,44 @@
     justify-content: space-between;
     align-items: center;
     font-size: 14px;
-    margin-top: 10px;
+    margin: 10px 0;
 }
 
 .loginActions a {
+    color: #2575fc;
     text-decoration: none;
-    color: #007bff;
 }
 
 .loginButton {
     width: 100%;
     padding: 12px;
-    border: none;
-    background: #007bff;
+    background: #2575fc;
     color: white;
-    font-size: 18px;
+    border: none;
     border-radius: 5px;
+    font-size: 16px;
     cursor: pointer;
-    margin-top: 20px;
-    transition: all 0.3s ease;
+    transition: 0.3s;
 }
 
 .loginButton:hover {
-    background: #0056b3;
-    background-color: orangered;
+    background: #1a5bbf;
 }
 
 .registerRedirect {
-    text-align: center;
     margin-top: 15px;
     font-size: 14px;
 }
 
 .registerRedirect a {
-    color: #007bff;
+    color: #2575fc;
     text-decoration: none;
+    font-weight: bold;
 }
 
-@media(max-width:426px) {
-    .registerMainForm {
-        margin-top: 50px;
-    }
-}
-
-
-.timer span {
+.timer {
     color: green;
+    margin: 0;
+    padding-bottom: 10px;
     font-size: 20px;
-
 }

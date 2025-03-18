@@ -1,0 +1,182 @@
+/* Centering the form on the page */
+.RegistrationMains {
+    background-color: #EBF5FF;
+    padding-bottom: 50px;
+}
+
+.bredcrums {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+.bredcrum {
+    display: flex;
+    align-items: center;
+}
+
+.bredcrum p {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0;
+}
+
+.bredcrum p:hover {
+    cursor: pointer;
+    color: blue;
+}
+
+.TeacherRegistration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Registration Container */
+.RegistrationMain {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    width: 650px;
+    text-align: center;
+    margin-top: 50px;
+
+}
+
+/* Form Heading */
+.RegistrationMain h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Form Container */
+.RegistrationForm {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Row for Two Input Fields */
+.Row {
+    display: flex;
+    gap: 15px;
+}
+
+/* Styling for Input Fields */
+.FormGroup {
+    margin-bottom: 15px;
+    text-align: left;
+    flex: 1;
+}
+
+/* Input Labels */
+.FormGroup label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Input Fields */
+.FormGroup input,
+.FormGroup select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background: #f9f9f9;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Focus Effect on Input Fields */
+.FormGroup input:focus,
+.FormGroup select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.4);
+}
+
+/* Submit Button */
+.SubmitButton {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Hover Effect for Button */
+.SubmitButton:hover {
+    background: linear-gradient(135deg, #0056b3, #004093);
+}
+
+/* Style for form rows */
+.Row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Style for form groups to ensure proper alignment */
+.FormGroup {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Specific adjustments for spacing */
+.FormGroup input,
+.FormGroup select {
+    padding: 10px;
+    margin-top: 5px;
+}
+
+/* Additional tweaks if needed */
+.SubmitButton {
+    margin-top: 20px;
+}
+
+@media (max-width: 769px) {
+    .Row {
+        flex-direction: column;
+        /* Stack inputs vertically */
+        gap: 10px;
+    }
+
+    .RegistrationMain {
+        width: 90%;
+        /* Make the form take most of the screen */
+        padding: 20px;
+    }
+
+    .FormGroup {
+        width: 100%;
+        /* Make each input take full width */
+    }
+
+    .SubmitButton {
+        width: 100%;
+        /* Ensure button is full width */
+    }
+
+    .bredcrums h4 {
+        font-size: 15px;
+    }
+
+    .bredcrum p {
+        font-size: 13px;
+    }
+}

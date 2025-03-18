@@ -1,356 +1,21 @@
-/* Hero Section Styling */
 .Pages {
   background-color: #f8fbff;
 }
 
-.hero {
-  height: 100vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-  animation: fadeIn 2s ease-in-out;
-  position: relative;
+.coursesDetailsAllMain {
+  padding: 30px 0px;
+  padding-top: 0px;
+  background-color: white;
+
 
 }
 
-.heroContent {
-  width: 50%;
-  animation: slideIn 1s ease-out;
-  
-}
-
-.heroContentImg {
-  width: 50%;
-  position: relative;
-}
-
-.heroText {
-  width: 50%;
-  animation: fadeInLeft 2s ease-in-out;
-}
-
-.heroContent h1 {
+.coursesDetailsAllMain h1 {
+  font-family: serif;
   font-size: 50px;
   font-weight: bold;
-  padding: 0;
-  margin: 0;
-}
-
-.heroContent p {
-  padding-top: 20px;
-  padding-right: 15px;
-  font-size: 17px;
-  color: rgba(133, 131, 131, 0.998);
-  font-family: sans-serif;
-  letter-spacing: 0.5px;
-  line-height: 30px;
-}
-
-.certificateAll {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.certificate {
-  display: flex;
-  align-items: center;
-  gap: 2px;
-}
-
-.certificateIcon {
-  color: rgba(133, 131, 131, 0.998);
-}
-
-.certificate p {
-  padding: 0;
-  margin: 0;
-  font-size: 15px;
-  color: rgba(133, 131, 131, 0.998);
-}
-
-.getStarted {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  margin-top: 30px;
-
-}
-
-.getStarted button {
-  background-color: #007bff;
-  padding: 12px 40px;
-  border: none;
-  color: white;
-  transition: all 0.3s ease;
-  border-radius: 3px;
-}
-
-.getStarted button:hover {
-  background-color: red;
-
-}
-
-/* 
-.getStartedWatch {
-  width: 60px;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #9BC3E9;
-  border-radius: 100px;
-  transition: all 0.3s ease;
-}
-
-.getStartedWatch:hover {
-  background-color: #58adfc;
-  transform: scale(1.1);
-  cursor: pointer;
-}
-
-.getStartedWatchIcon {
-  background-color: #066AC9;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 13px;
-  border-radius: 100px;
-} */
-
-.getStartedWatch {
-  width: 60px;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #9BC3E9;
-  border-radius: 100px;
-  transition: all 0.3s ease;
-  animation: autoHover 1.5s ease-in-out infinite;
-  cursor: pointer;
-}
-
-/* Inner Icon */
-.getStartedWatchIcon {
-  background-color: #066AC9;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 13px;
-  border-radius: 100px;
-}
-
-/* Automatic Hover Animation */
-@keyframes autoHover {
-
-  0%,
-  100% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.3);
-  }
-}
-
-.heroImageBackground {
-  background-color: #1D3B53;
-  /* Semi-transparent overlay */
-  width: 100%;
-  height: 100%;
-  border-radius: 100% 50% 60% 70%;
-
-}
-
-.heroImageBackground img {
-  margin-top: -50px;
-  object-fit: contain;
-}
-
-.heroLogo1 {
-  position: absolute;
-  top: 23%;
-  left: -25px;
-  background-color: white;
-  width: 70px;
-  height: 70px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  border-radius: 5px;
-}
-
-.heroLogo1 img {
-  margin-top: 0;
-
-}
-
-.heroLogo2 {
-  position: absolute;
-  top: -14%;
-  left: 85%;
-
-}
-
-.heroLogo3 {
-  position: absolute;
-  top: -10%;
-  left: -40%;
-}
-
-.AddmissionComplete {
-  position: absolute;
-  top: 80%;
-  background-color: transparent;
-  width: 270px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
-  border: 1px solid white;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  border-radius: 10px;
-
-}
-
-.AddmissionCompleteIcon {
-  width: 50px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #F7C32E;
-  border-radius: 100px;
-  color: white;
-}
-
-.AddmissionCompleteContent h4 {
-  font-size: 14px;
-  color: white;
-  font-weight: bold;
-  display: flex;
-  justify-content: space-between;
-  margin: 0;
-}
-
-.AddmissionCompleteContent p {
-  font-size: 14px;
-  color: white;
-  margin: 0;
-  padding: 0;
-}
-
-.AddmissionCompleteContent i {
-  color: green;
-}
-
-.ourDaily {
-  background-image: url("../../public/assests/daily.png");
-  background-size: cover;
-  position: absolute;
-  top: 15%;
-  right: -40px;
-  background-color: #0CBC87;
-  width: 200px;
   text-align: center;
-  border-radius: 10px;
-
-}
-
-.ourDaily h4 {
-  font-size: 15px;
-  color: rgb(255, 255, 255);
-  padding: 20px;
-  padding-bottom: 0;
-
-}
-
-.ourDailyProfileAll {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  padding-top: 10px;
-}
-
-.ourDailyProfile {
-  background-color: white;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 100px;
-  margin-left: -15px;
-}
-
-.ourDailyProfile:nth-child(1) {
-  margin-left: 0;
-}
-
-.ourDailyProfile span {
-  background-color: #066AC9 !important;
-  color: white;
-  width: 35px;
-  height: 35px;
-  font-size: 14px;
-  border-radius: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.ourDailyProfile img {
-  border-radius: 100px;
-  margin-top: 0;
-
-}
-
-.heroText h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-.heroText p {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.watchButton {
-  padding: 12px 24px;
-  font-size: 1.2rem;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.watchButton:hover {
-  background-color: #0056b3;
-}
-
-.heroImage {
-  width: 45%;
-  animation: fadeInRight 2s ease-in-out;
-}
-
-.heroImage img {
-  width: 100%;
-  border-radius: 10px;
+  padding-bottom: 40px;
 }
 
 /* course deatils section start */
@@ -358,6 +23,7 @@
   display: flex;
   justify-content: space-between;
   gap: 20px;
+
 }
 
 .coursesDetails {
@@ -369,6 +35,7 @@
   padding: 30px 0px;
   background-color: #FEF6E0;
   border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
 }
 
@@ -413,54 +80,22 @@
 }
 
 /* course deatils section end */
+@media(max-width:769px) {
+  .coursesDetailsAll {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-/* instructor section start */
-.instructor {
-  background-color: #17A2B8;
-  border-radius: 10px;
-  padding: 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  .coursesDetails {
+    width: 48%;
+  }
 }
 
-.instructor h2 {
-  color: white;
-  margin: 0;
-  font-weight: bold;
+@media(max-width:426px) {
+
+
+
+  .coursesDetails {
+    width: 100%;
+  }
 }
-
-.instructorContent p {
-  margin: 0;
-  padding-right: 150px;
-  color: white;
-  padding-top: 20px;
-  font-size: 17px;
-  font-family: sans-serif;
-}
-
-.instructorBtn {
-  width: 50%;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.instructorBtn button {
-  padding: 10px 30px !important;
-  border: none;
-  border: 1px solid orange;
-  color: white;
-  transition: all 0.3s ease;
-  background-color: transparent;
-  border-radius: 5px;
-  font-weight: 500;
-
-}
-
-.instructorBtn button:hover {
-  background-color: orange;
-  color: black;
-
-}
-
-/* instructor section end */

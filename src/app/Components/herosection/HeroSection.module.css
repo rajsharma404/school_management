@@ -1,8 +1,9 @@
 .HeroSectionMain {
     width: 100%;
-    margin: auto;
     position: relative;
     overflow: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 .slide {
@@ -13,51 +14,59 @@
     height: 520px;
 }
 
-.slideOverlay {
-    position: absolute;
-    top: 0;
-    width: 100%;
+.slide img {
+    width: 101%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.527);
+    object-fit: cover;
+    object-position: center center;
 }
 
 .slideOverlay {
     position: absolute;
     top: 0;
+    left: 0;
     width: 100%;
-    height: 100%;
-    background: linear-gradient(to right,
-            rgba(0, 0, 0, 0.4),
-            rgba(0, 0, 0, 0.2),
-            rgba(0, 0, 0, 0.4));
+    height: 101%;
+    background: rgba(0, 0, 0, 0.6);
 }
 
 
 .HeroSectionContent {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 30%;
+    left: 0%;
     transform: translate(-50%, -50%);
     color: white;
     text-align: center;
-    width: 80%;
+    width: 100%;
+    animation: moveUpDown 4s ease-in-out infinite;
+    padding: 0px 150px;
+}
+
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(-10px);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
 }
 
 .HeroSectionContent h1 {
     font-size: 50px;
-    font-family: emoji;
+    font-family: sans-serif;
+    font-weight: bold;
 }
 
 .HeroSectionContent p {
     font-size: 20px;
 }
 
-.slide img {
-    width: 100%;
-    height: 100;
-    object-fit: contain;
-
-}
 
 .prevBtn,
 .nextBtn {
@@ -98,54 +107,57 @@
 }
 
 .getStarted button {
-    background-color: #007bff;
-    padding: 12px 40px;
-    border: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
     color: white;
-    transition: all 0.3s ease;
-    border-radius: 3px;
+    background: linear-gradient(45deg, #ff7f00, #ff4500);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 0 10px #ff7f00;
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    animation: pulse 1.5s infinite alternate;
 }
 
 .getStarted button:hover {
-    background-color: red;
-
+    background: linear-gradient(45deg, #ff4500, #ff2200);
+    transform: scale(1.1);
+    box-shadow: 0 0 25px #ff4500, 0 0 50px #ff2200;
 }
 
-.getStartedWatch {
-    width: 60px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #05050597;
-    border-radius: 100px;
-    transition: all 0.3s ease;
-    animation: autoHover 1.5s ease-in-out infinite;
-    cursor: pointer;
-}
-
-/* Inner Icon */
-.getStartedWatchIcon {
-    background-color: #066AC9;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 13px;
-    border-radius: 100px;
-}
-
-/* Automatic Hover Animation */
-@keyframes autoHover {
-
-    0%,
-    100% {
-        transform: scale(1);
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 10px #ff7f00;
     }
 
     50% {
-        transform: scale(1.3);
+        box-shadow: 0 0 20px #ff4500, 0 0 30px #ff2200;
+    }
+
+    100% {
+        box-shadow: 0 0 10px #ff7f00;
+    }
+}
+
+@media(max-width:426px) {
+    .slide {
+        height: 350px;
+    }
+
+    .HeroSectionContent {
+        padding: 0 20px;
+        top: 15%;
+    }
+
+    .HeroSectionContent h1 {
+        font-size: 30px;
+    }
+
+    .HeroSectionContent p {
+        font-size: 15px;
     }
 }

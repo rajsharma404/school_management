@@ -18,41 +18,40 @@ const Footer = () => {
                 <div className="container">
                     <div className="row">
 
-                        <div className="col-lg-3 col-md-5 col-sm-12 mb-5">
-                            <h1>Quick Support</h1>
-                            <ul>
-                                <li><Link href="#"><i className="fa-solid fa-house"></i> Home</Link></li>
-                                <li><Link href="#"><i className="fa-solid fa-lock"></i> Privacy</Link></li>
-                                <li><Link href="#"><i className="fa-solid fa-circle-question"></i> Support</Link></li>
-                                <li><Link href="#"><i className="fa-solid fa-circle-info"></i> Whatsapp</Link></li>
-                            </ul>
+                        <div className="col-lg-5 col-md-5 col-sm-12 mb-5">
+                            <h1>About</h1>
+                            <p>At Sanskaar Valley Public School, we believe in holistic education, blending academics with moral values, extracurricular activities, and life skills. Our experienced faculty, modern teaching methods, and student-centric approach ensure that every child reaches their full potential.</p>
+
                         </div>
 
-                        <div className="col-lg-3 col-md-5 col-sm-12 mb-5">
+                        <div className="col-lg-2 col-md-5 col-sm-12 mb-5">
                             <h1>Quick Links</h1>
+
                             <ul>
-                                <li><Link href="#"><i className="fa-solid fa-user-tie"></i>Call Student</Link></li>
-                                <li><Link href="#"><i className="fa-solid fa-lock"></i>Update Response</Link></li>
-                                <li><Link href="#"><i className="fa-solid fa-circle-question"></i> Scorecard</Link></li>
-                                <li><Link href="#"><i className="fa-solid fa-circle-info"></i>Community</Link></li>
+                                <li><Link href="#"><i className="fa-solid fa-angles-right"></i> Home</Link></li>
+                                <li><Link href="#"><i className="fa-solid fa-angles-right"></i> Privacy</Link></li>
+                                <li><Link href="#"><i className="fa-solid fa-angles-right"></i> Support</Link></li>
+                                <li><Link href="#"><i className="fa-solid fa-angles-right"></i> Whatsapp</Link></li>
                             </ul>
                         </div>
-                        <div className="col-lg-3 col-md-6 col-sm-12 mb-5">
-                            <h1>Classes</h1>
+                        <div className="col-lg-2 col-md-6 col-sm-12 mb-5">
+                            <h1>Class</h1>
                             <ul>
-                                <li><Link href="#"><i className="fa-solid fa-circle-dollar-to-slot"></i>Live Classes</Link></li>
-                                <li><Link href="#"><i className="fa-solid fa-bowl-food"></i> Offline Classes</Link></li>
-                                <li><Link href="#"><i className="fa-solid fa-filter-circle-dollar"></i> Recorded Course</Link></li>
-                                <li><Link href="#"><i className="fa-solid fa-hand-holding-dollar"></i>Membership</Link></li>
+                                <li><Link href="#"><i className="fa-solid fa-angles-right"></i>Nursery</Link></li>
+                                <li><Link href="#"><i className="fa-solid fa-angles-right"></i>Kindegarten</Link></li>
+                                <li><Link href="#"><i className="fa-solid fa-angles-right"></i>Class 1 </Link></li>
+                                <li><Link href="#"><i className="fa-solid fa-angles-right"></i>To Class 5</Link></li>
                             </ul>
                         </div>
 
                         <div className="col-lg-3 col-md-6 col-sm-12 mb-5">
                             <h1>Contact Us</h1>
                             <ul>
-                                <li><Link href="tel:+91112345678"><i className="fa-solid fa-phone"></i> 1232435465789</Link></li>
-                                <li><Link href="mailto:abc@gmail.com"><i className="fa-solid fa-envelope"></i> abce@gmail.com</Link></li>
-                                <li><Link href="#"><i className="fa-solid fa-location-dot"></i> Your Location</Link></li>
+                                <li><Link href="tel:+1 989-712-5000"><i className="fa-solid fa-phone"></i>
+                                    +1 989-712-5000</Link></li>
+                                <li><Link href="mailto:svpscharthawal@gmail.com"><i className="fa-solid fa-envelope"></i> svpscharthawal@gmail.com
+                                </Link></li>
+                                <li><Link href="#"><i className="fa-solid fa-location-dot"></i> Charthawal, Muzaffarnagar, India, Uttar Pradesh</Link></li>
                                 <li>
                                     <div className={style.socialIcons}>
                                         <Link href="#"><i className="fa-brands fa-facebook-f"></i></Link>
@@ -70,7 +69,7 @@ const Footer = () => {
 
             <div className={style.smallFooterSectrion}>
                 <div className={`${style.smallFooterDetails} container`}>
-                    <p>© 2025 <Link href="#">Learning Management System</Link>, All Rights Reserved.</p>
+                    <p>© 2025 <Link href="#">School Management System</Link>, All Rights Reserved.</p>
                     <p>Powered By: <Link target='_blank' title='Net Xperia' href="https://netxperia.com/">Net Xperia</Link></p>
                 </div>
             </div>

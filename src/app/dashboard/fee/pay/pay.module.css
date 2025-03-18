@@ -1,0 +1,160 @@
+/* Main Container */
+.feePay {
+    background-color: #EBF5FF;
+    padding: 10px 20px;
+
+}
+
+.payMains {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 30px;
+    border-top: 1px solid rgb(217, 217, 217);
+    padding-top: 40px;
+    margin-top: 10px;
+}
+
+/* Breadcrumb Navigation */
+.bredcrums {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.bredcrum {
+    display: flex;
+    align-items: center;
+}
+
+.bredcrum p {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0;
+    font-weight: 600;
+    color: #555;
+}
+
+.bredcrum p:hover {
+    color: #007bff;
+}
+
+/* Payment Card */
+.payMainCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 750px;
+    padding: 40px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.payMainCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Payment Section */
+.payMain {
+    width: 100%;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.payMain h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+.paymentForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.paymentForm .row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+}
+
+.paymentForm .column {
+    flex: 1;
+    min-width: 280px;
+}
+
+/* Input & Select Styling */
+.paymentForm label {
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 5px;
+    display: block;
+    text-align: left;
+}
+
+.paymentForm input,
+.paymentForm select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+    background: #f8f9fa;
+}
+
+.paymentForm input:focus,
+.paymentForm select:focus {
+    border-color: #007bff;
+    background: #fff;
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.2);
+}
+
+/* Button Styling */
+.paymentForm button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(to right, #007bff, #0056b3);
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.paymentForm button:hover {
+    background: linear-gradient(to right, #0056b3, #003f8a);
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .payMainCard {
+        padding: 20px;
+    }
+
+    .paymentForm .row {
+        flex-direction: column;
+    }
+
+    .payMain {
+        padding: 20px;
+    }
+}

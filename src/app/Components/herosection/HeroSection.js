@@ -1,11 +1,19 @@
-import React from "react";
-import Slider from "react-slick";
+"use client";
+import React, { useRef } from "react";
+import dynamic from "next/dynamic";
+import { Typewriter } from "react-simple-typewriter";
 import style from "./HeroSection.module.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+// Fix dynamic import for react-slick
+const Slider = dynamic(() => import("react-slick").then((mod) => mod.default), {
+    ssr: false,
+});
+
 const HeroSection = () => {
-    const sliderRef = React.useRef(null);
+    const sliderRef = useRef(null);
+
     const settings = {
         dots: true,
         infinite: true,
@@ -20,58 +28,79 @@ const HeroSection = () => {
 
     return (
         <div className={style.HeroSectionMain}>
-            <button className={style.prevBtn} onClick={() => sliderRef.current.slickPrev()}>
+            <button className={style.prevBtn} onClick={() => sliderRef.current?.slickPrev()}>
                 &#10094;
             </button>
+
             <Slider ref={sliderRef} {...settings}>
                 <div className={style.slide}>
-                    <img src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?uid=R156497285&ga=GA1.1.1921166926.1684059532&semt=ais_hybrid" alt="Slide 1" />
-                    <div className={style.slideOverlay}>
-
-
-                    </div>
+                    <img src="https://img.freepik.com/free-photo/portrait-happy-students-sitting-with-textbooks-pc-tablet_1262-17978.jpg" alt="Slide 1" />
+                    <div className={style.slideOverlay}></div>
                     <div className={style.HeroSectionContent}>
-                        <h1>Immerse yourself in an Online Retreat</h1>
-                        <p>Meet our exceptional Quest Coaches and learn from their wealth of experience to enhance your wellbeing and embody living.</p>
+                        <h1>
+                            <Typewriter
+                                words={["Welcome to DAV School", "Build Amazing Structure", "Enjoy Courses!"]}
+                                loop={false}
+                                cursor
+                                cursorStyle="|"
+                                typeSpeed={70}
+                                deleteSpeed={50}
+                                delaySpeed={1000}
+                            />
+                        </h1>
+                        <p>Meet our exceptional Quest Coaches and learn from their wealth of experience to enhance your wellbeing.</p>
                         <div className={style.getStarted}>
                             <button>Get Started</button>
-                            <div className={style.getStartedWatch}>
-                                <div className={style.getStartedWatchIcon}>
-                                    <i className="fa-solid fa-play"></i>
-
-                                </div>
-                            </div>
-
                         </div>
-
                     </div>
                 </div>
+
                 <div className={style.slide}>
-                    <img src="https://img.freepik.com/free-photo/city-commihttps://img.freepik.com/free-photo/tranquil-scene-mountain-peak-reflects-multi-colored-autumn-beauty-generated-by-artificial-intelligence_25030-67677.jpg?uid=R156497285&ga=GA1.1.1921166926.1684059532&semt=ais_hybrid" alt="Slide 2" />
-                    <div className={style.slideOverlay}>
-
-
-                    </div>
+                    <img src="https://img.freepik.com/free-photo/modern-amphitheater-usa_1268-14358.jpg" alt="Slide 2" />
+                    <div className={style.slideOverlay}></div>
                     <div className={style.HeroSectionContent}>
-                        <h1>Immerse yourself in an Online Retreat</h1>
-                        <p>Meet our exceptional Quest Coaches and learn from their wealth of experience to enhance your wellbeing and embody living.</p>
-
+                        <h1>
+                            <Typewriter
+                                words={["Welcome to DAV School", "Build Amazing Structure", "Enjoy Courses!"]}
+                                loop={false}
+                                cursor
+                                cursorStyle="|"
+                                typeSpeed={70}
+                                deleteSpeed={50}
+                                delaySpeed={1000}
+                            />
+                        </h1>
+                        <p>Meet our exceptional Quest Coaches and learn from their wealth of experience to enhance your wellbeing.</p>
+                        <div className={style.getStarted}>
+                            <button>Get Started</button>
+                        </div>
                     </div>
                 </div>
+
                 <div className={style.slide}>
-                    <img src="https://img.freepik.com/free-photo/close-up-green-leaf-with-fresh-water-droplets-generative-ai_188544-8635.jpg?uid=R156497285&ga=GA1.1.1921166926.1684059532&semt=ais_hybrid" alt="Slide 3" />
-                    <div className={style.slideOverlay}>
-
-
-                    </div>
+                    <img src="https://img.freepik.com/free-photo/modern-amphitheater-usa_1268-14358.jpg" alt="Slide 3" />
+                    <div className={style.slideOverlay}></div>
                     <div className={style.HeroSectionContent}>
-                        <h1>Immerse yourself in an Online LMS</h1>
-                        <p>Meet our exceptional Quest Coaches and learn from their wealth of experience to enhance your wellbeing and embody living.</p>
-
+                        <h1>
+                            <Typewriter
+                                words={["Welcome to DAV School", "Build Amazing Structure", "Enjoy Courses!"]}
+                                loop={false}
+                                cursor
+                                cursorStyle="|"
+                                typeSpeed={70}
+                                deleteSpeed={50}
+                                delaySpeed={1000}
+                            />
+                        </h1>
+                        <p>Meet our exceptional Quest Coaches and learn from their wealth of experience to enhance your wellbeing.</p>
+                        <div className={style.getStarted}>
+                            <button>Get Started</button>
+                        </div>
                     </div>
                 </div>
             </Slider>
-            <button className={style.nextBtn} onClick={() => sliderRef.current.slickNext()}>
+
+            <button className={style.nextBtn} onClick={() => sliderRef.current?.slickNext()}>
                 &#10095;
             </button>
         </div>

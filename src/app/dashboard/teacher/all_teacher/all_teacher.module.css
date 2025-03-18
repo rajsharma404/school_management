@@ -1,0 +1,149 @@
+.allStudentMains {
+    background-color: #f8f9fa;
+    padding-bottom: 80px;
+    background-color: #EBF5FF;
+}
+
+.bredcrums {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+.bredcrum {
+    display: flex;
+    align-items: center;
+}
+
+.bredcrum p {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0;
+}
+
+.bredcrum p:hover {
+    cursor: pointer;
+    color: blue;
+}
+
+.allStudentMain {
+    max-width: 1200px;
+    margin: auto;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    margin-top: 30px;
+}
+
+.allStudentMain h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Search Bar & Button */
+.searchContainer {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.searchBar {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 300px;
+    outline: none;
+    background-color: #f0f0f0;
+    border: 1px solid #007bff;
+    color: black;
+}
+
+.searchButton {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 0px 5px 5px 0px !important;
+    background-color: #007bff !important;
+    color: white !important;
+    cursor: pointer;
+}
+
+.searchButton:hover {
+    background-color: #0056b3;
+}
+
+/* Student Table */
+.studentTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.studentTable th,
+.studentTable td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.studentTable th {
+    background-color: #007bff;
+    color: white;
+}
+
+.studentTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.studentTable tr:hover {
+    background-color: #ddd;
+}
+
+.actionBtn {
+    display: flex;
+    gap: 5px;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2px;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.pagination button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid #007bff;
+    background-color: white;
+    color: #007bff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+}
+
+.pagination button:hover:not(:disabled) {
+    background-color: #007bff;
+    color: white;
+}
+
+@media (max-width: 769px) {
+
+    /* Make table scrollable */
+    .teacherTable {
+        overflow-x: auto;
+        width: 100%;
+    }
+
+}

@@ -1,0 +1,141 @@
+/* Main container */
+.studentDetailsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    padding: 40px;
+}
+
+/* Student Details Card */
+.studentDetailsCard {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 900px;
+    position: relative;
+    text-align: center;
+    border-left: 10px solid #007bff;
+    transition: all 0.3s ease-in-out;
+}
+
+.studentDetailsCard:hover {
+    transform: translateY(-5px);
+}
+
+/* Heading */
+.heading {
+    font-size: 28px;
+    font-weight: bold;
+    color: #004085;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    border-bottom: 3px solid #007bff;
+    padding-bottom: 8px;
+    display: inline-block;
+}
+
+/* Details Section */
+.details {
+    font-size: 18px;
+    line-height: 2;
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.details p {
+    margin: 0;
+    color: #333;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed #007bff;
+    padding: 10px 0px;
+}
+
+.details strong {
+    color: #007bff;
+    font-size: 18px;
+}
+
+/* Fee Details Section */
+.fee {
+    margin-top: 30px;
+    background: #eef7ff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.fee h1 {
+    font-size: 24px;
+    color: #004085;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #007bff;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.feeTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+.feeTable th,
+.feeTable td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.feeTable th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+.feeTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.feeTable tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Total Amount */
+.totalAmount {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #004085;
+    background: #cce5ff;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .studentDetailsCard {
+        padding: 30px;
+    }
+
+    .details p {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .feeTable th,
+    .feeTable td {
+        padding: 8px;
+    }
+}

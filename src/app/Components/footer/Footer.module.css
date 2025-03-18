@@ -1,18 +1,22 @@
 .footerSection {
-    background-color: #282828;
+    background-color: #1f1f1f;
     padding: 40px 0px;
 }
 
 .footerSection h1 {
     font-size: 17px;
     color: rgba(255, 255, 255, 0.886);
-    text-transform: uppercase;
-    color: orange;
+    color: rgb(234, 232, 232);
     font-weight: bold;
     letter-spacing: 1px;
     padding: 20px 0px;
-    border-bottom: 1px solid orange;
+    font-family: sans-serif;
+    /* border-bottom: 1px solid orange; */
 
+}
+
+.footerSection p {
+    padding-right: 20px;
 }
 
 .footerSection ul {
@@ -33,12 +37,13 @@
     padding: 10px 0px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.299);
     color: rgb(220, 220, 220);
+    transition: all 0.3s ease;
 
 }
 
 .footerSection ul a {
     text-decoration: none;
-    color: rgb(220, 220, 220);
+    color: #B7B6B6;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -51,33 +56,35 @@
 }
 
 .socialIcons a {
-    background-color: rgb(60, 60, 60);
-    width: 30px;
-    height: 30px;
+    background-color: #020202;
+    width: 35px;
+    height: 35px;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 0.3s ease;
     border-radius: 3px;
+    font-size: 12px;
+    transition: all 0.3s ease;
 }
 
-.footerSection ul a:hover {
+.footerSection ul li:hover {
     padding-left: 10px;
-    color: orange;
-}
-
-.footerSection .socialIcon a:hover {
-    padding-left: 0;
-}
-
-.footerSection ul a:hover i {
-    color: orange;
+    color: blue;
 }
 
 .footerSection ul li i {
     margin: 0;
     padding: 0;
     color: rgb(220, 220, 220);
+    color: rgb(255, 185, 56);
+}
+
+.socialIcons a i {
+    color: white !important;
+}
+
+.socialIcons a:hover {
+    background-color: rgb(48, 48, 234);
 }
 
 .footerSection ul li:nth-last-child(1) {
@@ -98,16 +105,16 @@
 
 .smallFooterDetails p {
     margin: 0;
-    color: rgb(231, 231, 231);
+    color: #B7B6B6;
     font-weight: 500;
     font-family: sans-serif;
     letter-spacing: 0.3px;
 }
 
 .smallFooterDetails a {
-    color: white;
-    color: rgb(231, 231, 231);
+    color: #B7B6B6;
     text-decoration: none;
+    font-family: sans-serif;
 
 }
 

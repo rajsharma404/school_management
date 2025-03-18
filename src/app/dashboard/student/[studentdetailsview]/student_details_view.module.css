@@ -1,0 +1,166 @@
+/* Main container */
+.studentDetailsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    padding: 20px;
+}
+
+/* Student Details Card */
+.studentDetailsCard {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 850px;
+    position: relative;
+    text-align: left;
+    border-left: 8px solid #007bff;
+}
+
+/* Profile Image at Top Right */
+.profileContainer {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 100px;
+    height: 130px;
+    background: white;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #007bff;
+    margin-right: 10px;
+}
+
+.profileImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Heading */
+.heading {
+    font-size: 26px;
+    font-weight: bold;
+    color: #004085;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+}
+
+/* Details Section */
+.details {
+    font-size: 16px;
+    line-height: 1.8;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.details p {
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 500;
+}
+
+.details strong {
+    color: #007bff;
+}
+
+/* Additional Images */
+.additionalImages {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    background: #eef7ff;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.imageSection {
+    text-align: center;
+    width: 48%;
+}
+
+.imageSection p {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #004085;
+}
+
+.signature,
+.aadhaarPhoto {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    border: 2px solid #007bff;
+    padding: 5px;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .studentDetailsCard {
+        padding-top: 70px;
+    }
+
+    .profileContainer {
+        position: relative;
+        top: 0;
+        right: 0;
+        margin-bottom: 20px;
+        text-align: center;
+        width: 90px;
+        height: 120px;
+    }
+
+    .profileImage {
+        width: 100%;
+        height: 100%;
+    }
+
+    .additionalImages {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imageSection {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+
+.feeTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.feeTable th,
+.feeTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.feeTable th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.feeTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.feeTable tr:hover {
+    background-color: #f1f1f1;
+}

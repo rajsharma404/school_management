@@ -1,0 +1,152 @@
+.performanceMains {
+    padding: 20px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    background-color: #EBF5FF;
+    margin-top: 30px;
+
+}
+
+.bredcrums {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+.bredcrum {
+    display: flex;
+    align-items: center;
+}
+
+.bredcrum p {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0;
+}
+
+.bredcrum p:hover {
+    cursor: pointer;
+    color: blue;
+}
+
+.searchBar {
+    padding: 10px;
+    width: 50%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+}
+
+.performanceTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.performanceTable th,
+.performanceTable td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.performanceTable th {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+}
+
+.performanceTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.performanceTable tr:hover {
+    background-color: #ddd;
+}
+
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pageInfo {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.paginationButtons {
+    display: flex;
+    gap: 10px;
+}
+
+.pagination button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.pagination button:hover:not(:disabled) {
+    background-color: #45a049;
+}
+
+.downloadIcon {
+    font-size: 22px;
+    cursor: pointer;
+    color: blue;
+    /* Green color */
+    transition: color 0.3s ease-in-out;
+}
+
+.downloadLink:hover .downloadIcon {
+    color: #218838;
+}
+
+@media (max-width: 768px) {
+    .performanceMains {
+        padding: 10px;
+    }
+
+    .searchBar {
+        width: 100%;
+    }
+
+    .performanceTable {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .bredcrums h4 {
+        font-size: 15px;
+    }
+
+    .bredcrum p {
+        font-size: 13px;
+    }
+}

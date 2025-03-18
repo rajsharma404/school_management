@@ -1,0 +1,81 @@
+.set_Universal_FeeMains {
+    height: 100vh;
+    background-color: #f4f4f4;
+    background-color: #EBF5FF;
+}
+
+/* Breadcrumb Navigation */
+.bredcrums {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+}
+
+.bredcrum {
+    display: flex;
+    align-items: center;
+}
+
+.bredcrum p {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0;
+    font-weight: 600;
+    color: #555;
+}
+
+.bredcrum p:hover {
+    color: #007bff;
+}
+
+.set_Universal_FeeMain {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    margin-top: 50px;
+}
+
+.set_Universal_FeeMain h1 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.set_Universal_FeeMain form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.set_Universal_FeeMain label {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.set_Universal_FeeMain select,
+.set_Universal_FeeMain input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.set_Universal_FeeMain button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}

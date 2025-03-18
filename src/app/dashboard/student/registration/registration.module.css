@@ -1,0 +1,132 @@
+.admissionMains {
+    background-color: #f4f4f4;
+    padding-bottom: 70px;
+    background-color: #EBF5FF;
+
+}
+
+/* Breadcrumb Navigation */
+.bredcrums {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+}
+
+.bredcrum {
+    display: flex;
+    align-items: center;
+}
+
+.bredcrum p {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0;
+    font-weight: 600;
+    color: #555;
+
+}
+
+.bredcrum p:hover {
+    color: #007bff;
+}
+
+.admissionMain {
+    width: 100%;
+    background: #fff;
+    padding: 30px 50px;
+    padding-bottom: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.admissionMain h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 24px;
+    color: #333;
+    font-family: serif;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.formRow {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.formGroup {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.formGroup span {
+    color: red;
+}
+
+.formGroup label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.formGroup input,
+.formGroup textarea,
+.formGroup select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: rgb(243, 243, 243);
+    outline: none;
+    color: black;
+}
+
+.formGroup input::placeholder {
+    color: black;
+}
+
+.fullWidthButton {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.fullWidthButton:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+    .formRow {
+        flex-direction: column;
+    }
+}
+
+@media(max-width:769px) {
+    .bredcrums h4 {
+        font-size: 15px;
+    }
+
+    .bredcrum p {
+        font-size: 13px;
+    }
+
+    .formRow {
+        gap: 0;
+    }
+
+    .admissionMain {
+        padding: 20px;
+    }
+}
