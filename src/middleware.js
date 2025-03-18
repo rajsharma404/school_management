@@ -85,31 +85,34 @@ export async function middleware(req) {
 
 
 
-import { NextResponse } from 'next/server';
 
 export function middleware(req) {
-    const res = NextResponse.next();
+    const { method, nextUrl } = req;
 
-    // Allow CORS for API routes
-    if (req.nextUrl.pathname.startsWith('/api/')) {
-        res.headers.set('Access-Control-Allow-Origin', '*'); // Adjust this for security in production
-        res.headers.set('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
-        res.headers.set('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-
-        // Handle preflight requests
-        if (req.method === 'OPTIONS') {
+    // Handle CORS for API routes
+    if (nextUrl.pathname.startsWith('/api/')) {
+        if (method === 'OPTIONS') {
+            // Respond immediately to OPTIONS requests
             return new Response(null, {
                 status: 204,
                 headers: {
-                    'Access-Control-Allow-Origin': '*',
-                    'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+                    'Access-Control-Allow-Origin': '*',  // Adjust this for security
+                    'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
                     'Access-Control-Allow-Headers': 'Content-Type, Authorization',
                 },
             });
         }
+
+        // Add CORS headers for non-OPTIONS requests
+        const res = NextResponse.next();
+        res.headers.set('Access-Control-Allow-Origin', '*');
+        res.headers.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+        res.headers.set('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+
+        return res;
     }
 
-    return res;
+    return NextResponse.next();
 }
 
 
