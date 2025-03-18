@@ -1,63 +1,4 @@
-// import { NextResponse } from "next/server";
 
-// const protectedRoutes = ["/dashboard", "/teacher", "/student"];
-
-// async function verifyJWT(token, secret) {
-//     try {
-//         const [header, payload, signature] = token.split(".");
-//         const encoder = new TextEncoder();
-//         const key = await crypto.subtle.importKey(
-//             "raw",
-//             encoder.encode(secret),
-//             { name: "HMAC", hash: "SHA-256" },
-//             false,
-//             ["verify"]
-//         );
-
-//         const valid = await crypto.subtle.verify(
-//             "HMAC",
-//             key,
-//             Uint8Array.from(atob(signature.replace(/-/g, "+").replace(/_/g, "/")), (c) => c.charCodeAt(0)),
-//             new TextEncoder().encode(header + "." + payload)
-//         );
-
-//         if (!valid) throw new Error("Invalid token");
-
-//         return JSON.parse(atob(payload)); // Decoded payload
-//     } catch (error) {
-//         console.error("JWT Verification Failed:", error.message);
-//         return null;
-//     }
-// }
-
-// export async function middleware(req) {
-//     const tokenCookie = req.cookies.get("token");
-//     const token = tokenCookie ? tokenCookie.value : null;
-
-//     // Check if the requested path starts with any of the protected routes
-//     if (protectedRoutes.some(route => req.nextUrl.pathname.startsWith(route))) {
-//         if (!token) {
-//             console.log("❌ No token found, redirecting to login");
-//             return NextResponse.redirect(new URL("/login", req.url));
-//         }
-
-//         const decoded = await verifyJWT(token, process.env.JWT_SECRET);
-
-//         if (!decoded) {
-//             console.log("❌ Invalid token, redirecting to login");
-//             return NextResponse.redirect(new URL("/login", req.url));
-//         }
-
-//         console.log("✅ Token Verified:", decoded);
-//     }
-
-//     return NextResponse.next();
-// }
-
-// // ✅ Update matcher to include all subpaths of protected routes
-// export const config = {
-//     matcher: ["/dashboard/:path*", "/teacher/:path*", "/student/:path*"],
-// };
 import { NextResponse } from "next/server";
 
 const protectedRoutes = {
@@ -126,7 +67,70 @@ export async function middleware(req) {
     return NextResponse.next();
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import { NextResponse } from 'next/server';
+
+export function middleware(req) {
+    const res = NextResponse.next();
+
+    // Allow CORS for API routes
+    if (req.nextUrl.pathname.startsWith('/api/')) {
+        res.headers.set('Access-Control-Allow-Origin', '*'); // Adjust this for security in production
+        res.headers.set('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+        res.headers.set('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+
+        // Handle preflight requests
+        if (req.method === 'OPTIONS') {
+            return new Response(null, {
+                status: 204,
+                headers: {
+                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+                    'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+                },
+            });
+        }
+    }
+
+    return res;
+}
+
+
+
 // ✅ Middleware applies to all protected subpaths
 export const config = {
-    matcher: ["/dashboard/:path*", "/teacher/:path*", "/student/:path*"],
+    matcher: ["/dashboard/:path*", "/teacher/:path*", "/student/:path*", '/api/:path*'],
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
